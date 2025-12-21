@@ -6,3 +6,31 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+
+@layer utilities {
+  .text-outline-hover {
+    transition: color 0.3s ease, -webkit-text-stroke 0.3s ease;
+  }
+
+  .text-outline-hover:hover {
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 7px;                  
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05); 
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 166, 0, 0.4);   
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 166, 0, 0.9);  
+}
