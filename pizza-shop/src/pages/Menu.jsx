@@ -105,22 +105,22 @@ const Menu = () => {
   // Apply search and filters to recipes
   const normalizedTerm = searchTerm.trim().toLowerCase();
   const filteredRecipes = recipes.filter((recipe) => {
-    // Search filter: Check if recipe name matches search term
+    // Check if recipe name matches search term
     const matchesSearch = normalizedTerm
       ? ((recipe.name || recipe.title || "").toLowerCase()).includes(normalizedTerm)
       : true;
 
-    // Difficulty filter: If difficulties selected, recipe must match one
+    // Check If difficulties selected, recipe must match one
     const matchesDifficulty = activeFilters.difficulties.length > 0
       ? activeFilters.difficulties.includes(recipe.difficulty)
       : true;
 
-    // Cuisine filter: If cuisines selected, recipe must match one
+    // Check If cuisines selected, recipe must match one
     const matchesCuisine = activeFilters.cuisines.length > 0
       ? activeFilters.cuisines.includes(recipe.cuisine)
       : true;
 
-    // Food type filter: If food types selected, recipe must match one
+    // Check If food types selected, recipe must match one
     const matchesFoodType = activeFilters.foodTypes.length > 0
       ? activeFilters.foodTypes.includes(recipe.foodType)
       : true;
@@ -130,7 +130,7 @@ const Menu = () => {
   });
 
   // useMutation hook for adding new recipes
-  // DummyJSON doesn't persist changes, so I track locally added recipes in state
+  // Tracking locally added recipes in state
   const addRecipeMutation = useMutation({
     mutationFn: addRecipe, 
     onSuccess: (newRecipe) => {
@@ -188,7 +188,7 @@ const Menu = () => {
       setIsEditing(false);
       setRecipeToEdit(null);
     },
-    onError: (error) => {
+    onError: () => {
       window.alert("Failed to update recipe. Please try again.");
     }
   });
