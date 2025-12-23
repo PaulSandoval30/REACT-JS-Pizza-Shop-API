@@ -322,7 +322,7 @@ const Menu = () => {
 
                 {/* Active Filters Display */}
                 <div className="flex items-center gap-[.5em] flex-1 min-w-0">
-                  <span className="text-[0.85rem] font-medium text-black/90 shrink-0 [border-left:1px_solid_rgba(0,0,0,0.2)] pl-[.9em]">Active Filters:</span>
+                  <span className="text-[0.85rem] font-medium text-black/90 shrink-0 [border-left:2px_solid_rgba(0,0,0,0.4)] pl-[.9em]">Active Filters:</span>
 
                   <div className="flex flex-wrap gap-[.4em] max-h-[2.1em] overflow-y-auto pr-[.3em]">
                     {activeFilters.difficulties.length === 0 &&
@@ -339,7 +339,7 @@ const Menu = () => {
                         key={difficulty}
                         className="flex items-center gap-[.3em] px-[0.8em] py-[0.4em] rounded-[999px] bg-[#312e81] text-white text-[0.8rem] font-medium shadow-[0_4px_12px_rgba(49,46,129,0.22)] border border-white/10 shrink-0"
                       >
-                        <span className="font-semibold">Difficulty</span>
+                        <span className="font-semibold">Difficulty:</span>
                         <span className="text-white/80">{difficulty}</span>
                       </div>
                     ))}
@@ -350,7 +350,7 @@ const Menu = () => {
                         key={cuisine}
                         className="flex items-center gap-[.3em] px-[0.8em] py-[0.4em] rounded-[999px] bg-[#1f2937] text-white text-[0.8rem] font-medium shadow-[0_4px_10px_rgba(0,0,0,0.18)] border border-white/10 shrink-0"
                       >
-                        <span className="font-semibold">Cuisine</span>
+                        <span className="font-semibold">Cuisine:</span>
                         <span className="text-white/80">{cuisine}</span>
                       </div>
                     ))}
@@ -361,7 +361,7 @@ const Menu = () => {
                         key={foodType}
                         className="flex items-center gap-[.3em] px-[0.8em] py-[0.4em] rounded-[999px] bg-[#0f766e] text-white text-[0.8rem] font-medium shadow-[0_4px_10px_rgba(15,118,110,0.22)] border border-white/10 shrink-0"
                       >
-                        <span className="font-semibold">Type</span>
+                        <span className="font-semibold">Type:</span>
                         <span className="text-white/80">{foodType}</span>
                       </div>
                     ))}
